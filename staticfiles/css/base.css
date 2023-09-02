@@ -10,7 +10,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-@media screen and (max-width: 768px) {
+
 .logo {
     position: absolute;
     top: 20px;
@@ -75,4 +75,3 @@ body{
     text-align: center;
   }
 
-}
