@@ -12,7 +12,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
 .logo {
-    position: absolute;
+    position:fixed;
     top: 20px;
     left: 20px;
   }
