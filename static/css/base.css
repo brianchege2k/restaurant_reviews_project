@@ -33,18 +33,19 @@
   margin-right: 5px; /* Add some spacing between icon and text */
 }
 
+/* CSS */
 .logo {
-    position:absolute;
-    top: 20px;
-    left: 20px;
-    
-  }
-  
-  .logo img {
-    width: 50px; /* Adjust the width as needed */
-    height: auto;
-  }
-  
+  position: absolute;
+  top: 20px; /* Adjust the top position as needed */
+  left: 20px; /* Adjust the left position as needed */
+}
+
+/* Ensure the logo is responsive */
+.logo img {
+  max-width: 100%; /* Make the image responsive and fit within the container */
+  height: auto; /* Maintain the image's aspect ratio */
+}
+
 body{
     font-family: 'Inter','sans-serif';
     background: var(--primary-color);
