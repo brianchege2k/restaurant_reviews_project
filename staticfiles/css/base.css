@@ -38,6 +38,7 @@
   position: absolute;
   top: 20px; /* Adjust the top position as needed */
   left: 20px; /* Adjust the left position as needed */
+  
 }
 
 /* Ensure the logo is responsive */
@@ -59,7 +60,7 @@ h1{
 .form-container {
   border: 5px solid #E93917;
   padding: 20px;
-  margin-top: 20px;
+  margin-top: 50px;
   margin-bottom: 20px;
   border-radius: 10px;
 }
