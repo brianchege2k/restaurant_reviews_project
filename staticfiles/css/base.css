@@ -36,13 +36,13 @@
 /* CSS */
 .logo {
   position: absolute;
-  top: 10px; /* Adjust the top position as needed */
-  left: 10px; /* Adjust the left position as needed */
+  top: 20px; /* Adjust the top position as needed */
+  left: 20px; /* Adjust the left position as needed */
 }
 
 /* Ensure the logo is responsive */
 .logo img {
-  max-width: 100%; /* Make the image responsive and fit within the container */
+  max-width: 30%; /* Make the image responsive and fit within the container */
   height: auto; /* Maintain the image's aspect ratio */
 }
 
