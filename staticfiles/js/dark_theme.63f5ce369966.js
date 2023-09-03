@@ -2,8 +2,8 @@ var icon = document.getElementById('icon');
 icon.onclick = function () {
     document.body.classList.toggle("dark-theme");
     if (document.body.classList.contains("dark-theme")) {
-        icon.src = sunImageURL;
+        icon.src = "{% static 'img/sun.png' %}";
     } else {
-        icon.src = moonImageURL;
+        icon.src = "{% static 'img/moon.png' %}";
     }
 }

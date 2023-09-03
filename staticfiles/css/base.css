@@ -17,7 +17,10 @@
   right: 20px;
   z-index: 1000; /* Ensure it's above other content */
 }
-
+#icon{
+  width: 30px;
+  cursor: pointer;
+}
 .dark-theme-toggle button {
   background-color: transparent;
   border: none;
@@ -43,6 +46,10 @@
   
 body{
     font-family: 'Inter','sans-serif';
+    background: var(--primary-color);
+}
+h1{
+  color: var(--secondary-color);
 }
 
 .form-group {
@@ -52,6 +59,7 @@ body{
   .form-group label {
     display: block;
     margin-bottom: 5px;
+    color: var(--secondary-color);
   }
   
   .form-group input {
@@ -93,4 +101,15 @@ body{
     margin: 0 auto;
     text-align: center;
   }
+:root{
+  --primary-color: #edf2fc;
+  --secondary-color: #212121;
 
+}
+.dark-theme{
+
+  --primary-color: #000106;
+  --secondary-color: #fff;
+
+
+}

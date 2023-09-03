@@ -1,20 +1,9 @@
-
-  // Function to toggle dark theme
-  function toggleDarkTheme() {
+var icon = document.getElementById('icon');
+icon.onclick = function () {
     document.body.classList.toggle("dark-theme");
-    // Store user's preference in localStorage
     if (document.body.classList.contains("dark-theme")) {
-      localStorage.setItem("darkTheme", "enabled");
+        icon.src = sunImageURL;
     } else {
-      localStorage.setItem("darkTheme", "disabled");
+        icon.src = moonImageURL;
     }
-  }
-
-  // Add event listener to the button
-  document.getElementById("darkThemeButton").addEventListener("click", toggleDarkTheme);
-
-  // Check user's preference from localStorage and set dark theme if preferred
-  if (localStorage.getItem("darkTheme") === "enabled") {
-    toggleDarkTheme();
-  }
-
+}

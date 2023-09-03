@@ -48,9 +48,6 @@ body{
     font-family: 'Inter','sans-serif';
     background: var(--primary-color);
 }
-h1{
-  color: var(--secondary-color);
-}
 
 .form-group {
     margin-bottom: 20px;

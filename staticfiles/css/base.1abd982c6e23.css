@@ -1,0 +1,136 @@
+/* Default styles for elements inside the page container */
+.container {
+  color: black;
+  background-color: white;
+}
+
+/* Styles for elements inside the page container when dark theme is active */
+.dark-class .container {
+  color: white;
+  background-color: rgb(12, 10, 10);
+}
+
+.logo {
+    position: -webkit-sticky;
+    top: 20px;
+    left: 20px;
+    /* Add the following lines to apply the dark theme to the logo */
+    filter: invert(1); /* Invert the logo colors for dark mode */
+}
+
+.logo img {
+    width: 50px;
+    height: auto;
+}
+
+body {
+    font-family: 'Inter', 'sans-serif';
+    color: black;
+    background-color: rgb(241, 241, 241);
+    transition: color 0.5s ease, background-color 0.5s ease; /* Add smooth transitions for color changes */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.form-container {
+    border: 5px solid #E93917;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.social-icons {
+    text-align: center;
+    transition: color 2s ease-in-out;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 5px;
+    width: 60px;
+    height: 60px;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+    color: #E93917;
+}
+
+.center-btn {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.dark-class {
+    color: white;
+    background-color: rgb(12, 10, 10);
+}
+
+.toggleButton {
+    width: 5rem;
+    height: 2rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: inline-block;
+    /* Add the following lines to apply the dark theme to the button */
+    color: white;
+    background-color: rgb(12, 10, 10);
+}
+
+.toggleButton input {
+    opacity: 0;
+}
+
+.roundButton {
+    background-color: black;
+    top: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+}
+
+.roundButton:before {
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    content: "";
+    background-color: grey;
+    transition: 1s;
+    height: 2rem;
+    width: 2rem;
+}
+
+input:checked+.roundButton {
+    background-color: white;
+}
+
+input:checked+.roundButton:before {
+    transform: translateX(3rem);
+}
+
+.roundButton.circle {
+    border-radius: 2rem;
+}
+
+.roundButton.circle:before {
+    border-radius: 50%;
+}
