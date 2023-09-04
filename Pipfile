@@ -10,6 +10,8 @@ gunicorn = "*"
 whitenoise = "*"
 mysqlclient = "*"
 python-decouple = "*"
+django-recaptcha = "*"
+requests = "*"
 
 [dev-packages]
 

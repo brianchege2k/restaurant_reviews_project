@@ -1,16 +1,32 @@
+import requests
+from django.contrib import messages
 from django.shortcuts import render, redirect
 from .forms import ReviewForm
-from .models import Review
-from django.core.mail import send_mail
-from django.template.loader import render_to_string
 from django.conf import settings
 
 def landing_page(request):
     if request.method == 'POST':
         form = ReviewForm(request.POST)
         if form.is_valid():
-            form.save()
-            return redirect('thank_you')
+            recaptcha_response = request.POST.get('g-recaptcha-response')
+            if recaptcha_response:
+                data = {
+                    'secret': settings.RECAPTCHA_PRIVATE_KEY,
+                    'response': recaptcha_response,
+                }
+
+                response = requests.post('https://www.google.com/recaptcha/api/siteverify', data=data)
+                result = response.json()
+
+                if result['success']:
+                    form.save()
+                    return redirect('thank_you')
+                else:
+                    messages.error(request, 'reCAPTCHA validation failed. Please try again.')
+            else:
+                messages.error(request, 'reCAPTCHA validation failed. Please try again.')
+        else:
+            messages.error(request, 'Form validation failed. Please check your input.')
     else:
         form = ReviewForm()
 
@@ -18,6 +34,3 @@ def landing_page(request):
 
 def thank_you(request):
     return render(request, 'thank_you.html')
-
-
-
