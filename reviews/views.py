@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.shortcuts import render, redirect
 from .forms import ReviewForm
 from django.conf import settings
+from .models import Review  # Import the Review model
 
 def landing_page(request):
     if request.method == 'POST':
@@ -19,7 +20,11 @@ def landing_page(request):
                 result = response.json()
 
                 if result['success']:
-                    form.save()
+                    # Create an instance of the Review model and save the form data
+                    review_instance = form.save(commit=False)  # Create an unsaved instance
+                    # Additional processing or modifications to the instance if needed
+                    review_instance.save()  # Save the instance to the database
+                    messages.success(request, 'Your review has been submitted.')
                     return redirect('thank_you')
                 else:
                     messages.error(request, 'reCAPTCHA validation failed. Please try again.')
