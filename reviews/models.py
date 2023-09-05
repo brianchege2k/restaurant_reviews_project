@@ -6,7 +6,7 @@ class Review(models.Model):
 
     name = models.CharField(max_length=100)
     email = models.EmailField(default='')
-    review_text = models.CharField(max_length=500)
+    review_text = models.TextField()
     rating = models.IntegerField(default=0, validators=[MinValueValidator(0), MaxValueValidator(10)])
     created_at = models.DateTimeField(auto_now_add=True)
 
