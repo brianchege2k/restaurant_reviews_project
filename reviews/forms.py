@@ -4,7 +4,7 @@ from .models import Review
 
 class ReviewForm(forms.ModelForm):
     name = forms.CharField(max_length=100)
-    email = forms.EmailField()
+    email = forms.EmailField( required=False)
     review_text = forms.CharField(widget=forms.Textarea)
     rating = forms.FloatField(min_value=1, max_value=10)
     captcha = ReCaptchaField()
