@@ -5,9 +5,9 @@ class Review(models.Model):
         db_table = 'review_table'
 
     name = models.CharField(max_length=100)
-    email = models.EmailField(default='')
+    email = models.EmailField(default='',null=True)
     review_text = models.TextField()
-    rating = models.IntegerField(default=0, validators=[MinValueValidator(0), MaxValueValidator(10)])
+    rating = models.FloatField(default=0, validators=[MinValueValidator(0), MaxValueValidator(10)])
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

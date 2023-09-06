@@ -118,3 +118,9 @@ h1{
 
 
 }
+.form-group textarea {
+  width: 100%; /* You can adjust the width as needed */
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
